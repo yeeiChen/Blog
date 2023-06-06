@@ -1,0 +1,40 @@
+<!--
+ * @Description: 
+ * @Author: yeeChen
+ * @Date: 2023-06-06 11:05:26
+ * @LastEditTime: 2023-06-06 11:22:48
+ * @LastEditors: yeeChen
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单例模式</title>
+</head>
+<body>
+    <script>
+        let CreateSingleton = (function(){
+            let instance 
+            return function(name){
+                if(instance){
+                    return instance
+                }
+                this.name = name
+                instance = this // 保存初次创建示例时this的指向
+                return instance
+            }
+        })()
+        CreateSingleton.prototype.getName = function(){
+            console.log(this.name)
+        }
+        let Person1 = new CreateSingleton('Person1')
+        let Person2 = new CreateSingleton('Person2')
+
+        console.log(Person1 === Person2)
+        console.log(Person1.name)
+        console.log(Person2.name)
+    </script>
+</body>
+</html>
