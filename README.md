@@ -8,7 +8,7 @@
 
 # Blog
 
-<img height="100" width="100" src="https://cdn.jsdelivr.net/gh/yeeiChen/yeeiChen/assets/header.png">
+<img height="100%" width="100%" src="https://cdn.jsdelivr.net/gh/yeeiChen/yeeiChen/assets/header.png">
 
 This is a collection of Ye's personal blog articles.
 
